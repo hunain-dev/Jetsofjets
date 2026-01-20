@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+
+
+::-webkit-scrollbar{
+  width: 0%;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: Gt;
+  src: url(../src/assets/Gt.otf);
+}
+
+.Gt{
+  font-family: Gt;
+}
+
+@font-face {
+  font-family: Gt2;
+  src: url(../src/assets/Gt2.otf);
+}
+
+.Gt2{
+  font-family: Gt2;
+}
+
+@font-face {
+  font-family: Gt3;
+  src: url(../src/assets/Gt3.otf);
+}
+
+.Gt3{
+  font-family: Gt3;
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-clouds {
+  animation: cloudMove 130s linear infinite;
+}
