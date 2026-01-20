@@ -47,5 +47,5 @@ html,body{
 }
 
 .animate-clouds {
-  animation: cloudMove 130s linear infinite;
+  animation: cloudMove 200s linear infinite;
 }
