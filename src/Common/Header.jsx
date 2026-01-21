@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='pt-6 z-999  w-full text-white grid grid-cols-2 fixed'>
+    <div className='pt-6 cursor-pointer z-999  w-full text-white grid grid-cols-2 fixed'>
         <div className='Gt flex  items-center justify-start px-24 gap-9 h-full w-full'>
             <h2>About</h2>
             <h2>Our floot</h2>

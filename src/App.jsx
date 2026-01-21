@@ -2,7 +2,10 @@ import React, { useEffect } from 'react'
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useRef } from 'react';
-import Home from './pages/Home';
+import Home from './Section/Home/Home';
+import Aboutus from './Section/Aboutus/Aboutus';
+import OurFloot from './Section/OurFloot/OurFloot';
+
 const App = () => {
   const scrollRef = useRef(null);
 
@@ -30,8 +33,9 @@ const App = () => {
     <div ref={scrollRef}>
       <div className=' w-full '>
         <Home/>
-        {/* <div className='h-screen  w-full bg-[#4b79a1]'></div> */}
-        
+        <Aboutus/>
+        <OurFloot/>
+    
       </div>
       
     </div>

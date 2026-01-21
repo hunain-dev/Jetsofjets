@@ -1,9 +1,9 @@
-import jetshome from "../assets/Jets.webp"
-import backclouds from "../assets/Clouds.webp"
+import jetshome from "../../assets/images/Jets.webp"
+import backclouds from "../../assets/images/Clouds.webp"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
-import cloudy from "../assets/real.png"
+import cloudy from "../../assets/images/real.png"
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
     const containerRef = useRef(null);
