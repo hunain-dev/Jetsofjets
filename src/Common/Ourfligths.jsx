@@ -18,8 +18,9 @@ const Ourfligths = () => {
     setOpenpopup(false);
   };
   return (
-    <div className='h-full overflow-hidden p-5   cursor-pointer px-15   flex items-end justify-center w-full  fixed bottom-0 z-9999'>
-      <div className="back h-full  overflow-hidden w-full flex items-end justify-center relative  ">
+<div className='  h-1/4 md:h-1/3 lg:h-2/5 xl:h-1/2
+ pointer-events-none overflow-hidden p-5 cursor-pointer px-15 flex items-end justify-center w-full fixed bottom-0 z-50'>
+<div className="back h-full cursor-pointer pointer-events-auto  overflow-hidden w-full flex items-end justify-center relative  ">
       <div onClick={buttonHandler}  className="
 
 overflow-hidden
@@ -52,10 +53,14 @@ className='py-2 px-2 bg-white rounded-full'>
 
 
 className="w-full   py-13 overflow-hidden   flex items-center justify-evenly  absolute bottom-0 left-0 bg-white rounded-3xl">
-  <div className="absolute flex items-center justify-end text-black top-0 right-0  ">
+  <motion.div   initial={{ y: 50, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  exit={{ y: 50, opacity: 0 }}
+  transition={{ duration: 0.5, ease: "easeInOut" }}
+ className="absolute flex items -center justify-end text-black top-1 right-2  ">
   <IoIosClose className="text-4xl"  onClick={Close} />
 
-  </div>
+  </motion.div>
   <div className="Gt3  h-full flex items-center justify-start">
     <h2 className="text-black text-3xl">Contact</h2>
   </div>
