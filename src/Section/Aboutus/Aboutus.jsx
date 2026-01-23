@@ -1,6 +1,66 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Aboutclouds from "../../assets/images/Aboutclouds.png"
+import SplitType from "split-type";
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from 'react';
+import Lenis from 'lenis';
+gsap.registerPlugin(ScrollTrigger);
+
 const Aboutus = () => {
+  const textRef = useRef([]);
+
+  useEffect(() => {
+    // Lenis smooth scroll
+    const lenis = new Lenis({
+      smooth: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    textRef.current.forEach((element) => {
+      const text = new SplitType(element, { types: "chars" });
+
+      const scrollConfig = {
+        trigger: element,
+        start: "top 80%",
+        end: "top 60%",
+        scrub: 7,
+      };
+
+      // Opacity reveal
+      gsap.fromTo(
+        text.chars,
+        { opacity: 0.4 },
+        {
+          opacity: 1,
+          stagger: 4,
+          duration:7,
+          scrollTrigger: scrollConfig,
+        }
+      );
+
+      // Color reveal for span text
+      gsap.fromTo(
+        element.querySelectorAll("span .char"),
+        { color: "white" },
+        {
+          color: "#ff0000",
+          stagger: 3,
+          scrollTrigger: scrollConfig,
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
+
     const obj = [
         {
             tittle:<>
@@ -38,13 +98,13 @@ const Aboutus = () => {
 <div className='back h-full w-full'>
         <img src={Aboutclouds} className='h-full w-full object-cover' alt="" />
         </div>
-        <div className='front pt-20 px-20  text-white  h-full w-full  absolute top-0 left-0'>
+        <div className='front pt-20 px-20    h-full w-full  absolute top-0 left-0'>
             <div className='  w-full '>
-                <h2 className='Gt3 tracking-tighter leading-14 text-[3.4vw]'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
+                <h2  ref={(el) => (textRef.current[0] = el)} className='text-white  Gt3 tracking-tighter leading-14 text-[3.4vw]'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
                 </h2>
             </div>
 
-            <div className=' mt-20 w-full  grid grid-cols-2'>
+            <div className=' text-white mt-20 w-full  grid grid-cols-2'>
                 <div className='h-full w-full flex items-start justify-start gap-5 '>
                     <div className='h-[6vh] flex items-center   gap-3 justify-start  '>
                     <svg className='w-9' viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -7,8 +7,11 @@ import Aboutus from './Section/Aboutus/Aboutus';
 import OurFloot from './Section/OurFloot/OurFloot';
 import FlatAeroplane from "../src/assets/Images/FlatAeroplane.png"
 import Advantages from './Section/Advantages/Advantages';
+import Global from './Section/Global/Global';
 const App = () => {
   const scrollRef = useRef(null);
+
+  
 
 
   useEffect(() => {
@@ -73,15 +76,12 @@ const App = () => {
 
   return (
     <div ref={scrollRef}>
-      <div className=' w-full '>
+      <div className='h-full w-full '>
         <Home/>
         <Aboutus/>
         <div className=' bg-gradient-to-b from-[#D6CEC5] to-[#FCF6EB] h-full w-full'>
         <OurFloot/>
-
-        {/* our manufacture */}
-           
-           <div className='h-screen  px-20 w-full  grid grid-cols-3'>
+     <div className='h-screen px-20   w-full  grid grid-cols-3'>
             <div className='h-full py-10 flex items-center justify-between flex-col w-full '>
              <div className='Gt3  text-[#312726] w-full '>
               <h2 className='tracking-tighter text-1xl'> Gulfstream</h2>
@@ -141,13 +141,11 @@ const App = () => {
                 
                         </div>
             </div>
-           </div>
-
+     </div>
+      <Advantages/>
         </div>
+      <Global/>
 
-
-        <Advantages/>
-    
       </div>
       
     </div>

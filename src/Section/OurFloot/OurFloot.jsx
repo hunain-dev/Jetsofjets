@@ -37,7 +37,7 @@ const OurFloot = () => {
 
  className="h-screen w-full overflow-hidden     relative">
     <div className="back flex items-end justify-end h-full w-full ">
-        <div className='py-30 px-15  text-[#312726] w-full  grid grid-cols-2'>
+        <div className='py-30  px-15  text-[#312726] w-full  grid grid-cols-2'>
             <div className='h-full Gt3 w-full '>
                 <h1 className='text-8xl tracking-tighter'>Fly in</h1>
                 <h4 className='tracking-tighter'>Luxury <br /> That Moves <br /> With you</h4>
