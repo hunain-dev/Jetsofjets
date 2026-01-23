@@ -8,11 +8,57 @@ import OurFloot from './Section/OurFloot/OurFloot';
 import FlatAeroplane from "../src/assets/Images/FlatAeroplane.png"
 import Advantages from './Section/Advantages/Advantages';
 import Global from './Section/Global/Global';
+import { motion } from "framer-motion";
+
 const App = () => {
   const scrollRef = useRef(null);
 
-  
 
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.8,
+      },
+    },
+  };
+  
+  const leftVariant = {
+    hidden: { x: -160, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.1,
+        ease: [0.22, 1, 0.36, 1], // luxury ease
+      },
+    },
+  };
+  
+  const centerVariant = {
+    hidden: { scale: 0.92, opacity: 0 },
+    show: {
+      scale: 1.2,
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+        ease: "easeOut",
+      },
+    },
+  };
+  
+  const rightVariant = {
+    hidden: { x: 160, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.3,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+  
 
   useEffect(() => {
     const scroll = new LocomotiveScroll({
@@ -81,13 +127,17 @@ const App = () => {
         <Aboutus/>
         <div className=' bg-gradient-to-b from-[#D6CEC5] to-[#FCF6EB] h-full w-full'>
         <OurFloot/>
-     <div className='h-screen px-20   w-full  grid grid-cols-3'>
-            <div className='h-full py-10 flex items-center justify-between flex-col w-full '>
-             <div className='Gt3  text-[#312726] w-full '>
+     <motion.div  variants={container}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.8 }} className='h-screen p-7 px-20   w-full  grid grid-cols-3'>
+            <motion.div     variants={leftVariant}
+  className='h-full py-10 flex items-center justify-between flex-col w-full '>
+             <div   className='Gt3  text-[#312726] w-full '>
               <h2 className='tracking-tighter text-1xl'> Gulfstream</h2>
               <h4  className='tracking-tighter mt-4 text-7xl'>650ER</h4>
              </div>
-             <div className=' w-full  grid grid-cols-2'>
+             <div  className=' w-full  grid grid-cols-2'>
              <div className='h-full w-full flex items-center gap-7 justify-start flex-col'>
               {
                 planeranks.map((elem,index)=>{
@@ -117,19 +167,22 @@ const App = () => {
                 </div>     
                 
                         </div>
-            </div>
-            <div className='h-full w-full '>
+            </motion.div>
+            <motion.div     variants={centerVariant}
+ className='h-full w-full '>
               <img src={FlatAeroplane} className='h-full p-5 w-full object-cover' alt="" />
-            </div>
-            <div className='h-full flex items-center justify-center gap-6 flex-col w-full '>
+            </motion.div>
+            <motion.div         variants={rightVariant}
+
+ className='h-full flex items-end justify-center gap-6 flex-col w-full '>
              <div className='Gt3  text-[#312726] w-full '>
-              <h2 className='tracking-tighter text-1xl'>Ultra-long-range <br /> Aircraft              </h2>
+              <h2 className='tracking-tighter text-1xl text-right'>Ultra-long-range <br /> Aircraft              </h2>
              </div>
-             <div className=' w-full  grid grid-cols-1'>
-             <div className='h-full w-full flex items-center gap-7 justify-start flex-col'>
-                  <div   className='Gt3 flex items-start justify-start flex-col gap-6   w-full'>
-                    <h3 className='tracking-tighter text-[0.7vw]'>Direct Access to Private Travel                    </h3>
-                    <h3 className='tracking-tighter text-[0.7vw]'>A true time-saving machine it brings Tokyo and New York an hour closer, and at 92% of the speed of sound, it can circle the globe with just a single stop.
+             <div className=' w-full  grid grid-cols-1  '>
+             <div className='h-full w-full flex items-end gap-7 justify-end flex-col'>
+                  <div   className='Gt3 flex items-end justify-end flex-col gap-6   w-full'>
+                    <h3 className='tracking-tighter text-[0.7vw]  '>Direct Access to Private Travel                    </h3>
+                    <h3 className='tracking-tighter text-[0.7vw] text-right'>A true time-saving machine it brings Tokyo and New York an hour closer, and at 92% of the speed of sound, it can circle the globe with just a single stop.
 
 </h3>
                   </div>
@@ -140,8 +193,8 @@ const App = () => {
           
                 
                         </div>
-            </div>
-     </div>
+            </motion.div>
+     </motion.div>
       <Advantages/>
         </div>
       <Global/>

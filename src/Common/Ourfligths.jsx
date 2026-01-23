@@ -1,10 +1,27 @@
-import React from 'react'
 import { IoPaperPlane } from "react-icons/io5";
+import TextField from '@mui/material/TextField';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { IoIosClose } from "react-icons/io";
+
 
 const Ourfligths = () => {
+
+  const [Openpopup, setOpenpopup] = useState(false)
+
+  const buttonHandler = () => {
+    setOpenpopup(true); 
+  };
+
+
+    const Close = () => {
+    setOpenpopup(false);
+  };
   return (
-    <div className='py-9   flex items-start justify-center w-full  fixed bottom-0 z-9999'>
-<div className="
+    <div className='h-full overflow-hidden p-5   cursor-pointer px-15   flex items-end justify-center w-full  fixed bottom-0 z-9999'>
+      <div className="back h-full  overflow-hidden w-full flex items-end justify-center relative  ">
+      <div onClick={buttonHandler}  className="
+
 overflow-hidden
 p-1
 
@@ -19,10 +36,74 @@ p-1
 <div className='Gt2   py-1 px-4 flex items-center justify-center h-full  rounded-full bg-white'>
     <h2 className='text-[1.1vw]'>Book the flight</h2>
 </div>
-<div className='py-2 px-2 bg-white rounded-full'>
+<div     
+className='py-2 px-2 bg-white rounded-full'>
 <IoPaperPlane className='text-1xl' />
 </div>
-</div>      
+</div>  
+
+{
+  Openpopup && (
+<motion.div
+  initial={{ y: 50, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  exit={{ y: 50, opacity: 0 }}
+  transition={{ duration: 0.5, ease: "easeInOut" }}
+
+
+className="w-full   py-13 overflow-hidden   flex items-center justify-evenly  absolute bottom-0 left-0 bg-white rounded-3xl">
+  <div className="absolute flex items-center justify-end text-black top-0 right-0  ">
+  <IoIosClose className="text-4xl"  onClick={Close} />
+
+  </div>
+  <div className="Gt3  h-full flex items-center justify-start">
+    <h2 className="text-black text-3xl">Contact</h2>
+  </div>
+  <div className="h-full  flex items-center justify-center ">
+    <div className=" flex items-center justify-center gap-10 w-full ">
+    <TextField
+          id="filled-multiline-flexible"
+          label="Name"
+          multiline
+          className="Gt3"
+          maxRows={3}
+        />
+
+<TextField
+          id="filled-multiline-flexible"
+          label="Email"
+          multiline
+          maxRows={3}
+        />
+        <TextField
+          id="filled-multiline-flexible"
+          label="Password"
+          multiline
+          maxRows={3}
+        />
+
+<TextField
+          id="filled-multiline-flexible"
+          label="Arivving"
+          multiline
+          maxRows={3}
+        />  
+    </div>
+  </div>
+  <div className="h-full w-fit px-5 flex items-center justify-center ">
+  <div className='py-2 px-2 bg-black text-white rounded-full'>
+<IoPaperPlane className='text-1xl' />
+</div>
+  </div>
+
+</motion.div>
+  )
+}
+
+
+      </div>
+ 
+
     </div>
   )
 }

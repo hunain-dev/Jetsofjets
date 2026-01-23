@@ -4,10 +4,10 @@ const Header = () => {
   return (
     <div className='pt-6 cursor-pointer z-999  w-full text-white grid grid-cols-2 fixed'>
         <div className='Gt flex  items-center justify-start px-24 gap-9 h-full w-full'>
-            <h2>About</h2>
-            <h2>Our floot</h2>
-            <h2>Advantages</h2>
-            <h2>Global</h2>
+            <a href='#Aboutus'>About</a>
+            <a href='#Ourfloot'>Our floot</a>
+            <a href='#Advantages'>Advantages</a>
+            <a href='#Global'>Global</a>
         </div>
  <div className='Gt flex  items-center justify-end px-24 gap-9 h-full w-full '>
             <h2>+971 54 432 5050</h2>

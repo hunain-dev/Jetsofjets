@@ -71,7 +71,7 @@ const Home = () => {
     
 
   return (
-    <div       ref={containerRef}
+    <div  id="home"     ref={containerRef}
     className='h-screen w-full relative overflow-hidden '>
         <div className='h-full w-full  relative'>
             <img src={backclouds} alt="clouds image" className='h-full w-full object-cover' />
@@ -137,7 +137,7 @@ const Home = () => {
     <div className="gap-16 flex items-center justify-between flex-col w-full text-white ">
         <h2 className="Gt3 leading-14 text-6xl tracking-tighter text-right">We are <br /> distinction</h2>
         <div className="Gt  uppercase flex items-center justify-between py-3 w-full  border-t-1 border-t-white">
-            <h2 className="text-[0.8vw]">Scroll down</h2>
+            <a href="#Aboutus" className=" cursor-pointer text-[0.8vw]">Scroll down</a>
             <h2 className="text-[0.8vw]">Start the journey</h2>
         </div>
     </div>

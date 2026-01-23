@@ -1,11 +1,12 @@
 // import React, { useEffect, useRef } from 'react'
 import { motion } from "framer-motion";
 import Eearth from "../../assets/images/Earth.png"
+
 const Global = () => {
 
   
   return (
-    <div className=" h-screen w-full overflow-hidden  bg-gradient-to-b relative from-[#2D2423] to-[#020101]">
+    <div id="Global" className=" h-screen w-full overflow-hidden  bg-gradient-to-b relative from-[#2D2423] to-[#020101]">
       <div className="h-full w-full relative ">
          <div className=" w-full ">
           <h2 className="Gt3 text-[25vw] leading-90 tracking-tighter text-[#2E2524]">Global</h2>

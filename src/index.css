@@ -6,10 +6,15 @@
   width: 0%;
 }
 
-html,body{
+body,html{
+  scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: #F0F0F0;
 }
 
+.smooth-scroll {
+scroll-behavior: smooth;
+}
 @font-face {
   font-family: Gt;
   src: url(../src/assets/Gt.otf);

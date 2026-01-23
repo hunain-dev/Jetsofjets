@@ -8,7 +8,7 @@ import Loader from './Common/Loader.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <Loader/> */}
+    <Loader/>
     <Header/>
     <Ourfligths/>
     <App />

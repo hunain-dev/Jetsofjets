@@ -1,42 +1,46 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Loader = () => {
   const loaderRef = useRef(null);
   const textRef = useRef(null);
-
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline();
-
-    // 🔹 Text fade + move up
-
-    tl.from(textRef.current, {
-        opacity: 1,
-        y: -40,
-        delay:0.3,
-        duration: 1.2,
-        ease: "power3.inOut",
-      })
   
-    tl.to(textRef.current, {
+    // 1️⃣ Text comes UP (bottom → center)
+    tl.from(textRef.current, {
+      y: 40,         // start below
+      opacity: 0,    // start invisible
+      duration: 1.2,
+      ease: "power3.out",
+    })
+  
+    // 2️⃣ Small hold (center pause)
+    .to(textRef.current, {
+      y: 0,
+      opacity: 1,
+      duration: 0.6, // smooth hold
+    })
+  
+    // 3️⃣ Text goes UP and fades out
+    .to(textRef.current, {
+      y: -40,        // goes up
       opacity: 0,
-      y: 40,
-    delay:1.5,
       duration: 1,
       ease: "power3.inOut",
-    })
-
-      // 🔹 Loader slide LEFT and exit
-      .to(loaderRef.current, {
-        x: "-100%",
-        duration: 3,
-        scrub:4,
-        ease: "power4.inOut",
-        pointerEvents: "none",
-      });
-
+    }, "+=0.6")     // hold for 0.6s before moving up
+  
+    // 4️⃣ Loader slides LEFT & disappears
+    .to(loaderRef.current, {
+      x: "-100%",    // left slide
+      duration: 1.9,
+      ease: "power4.inOut",
+      pointerEvents: "none", // scroll unlock
+    });
   }, []);
-
+  
+  
+  
   return (
     <div
       ref={loaderRef}
@@ -46,7 +50,6 @@ const Loader = () => {
         ref={textRef}
         className="text-white flex flex-col items-center gap-3"
       >
-        <h2 className="Gt uppercase text-lg">Jesko Jets</h2>
         <h1 className="text-center Gt3 text-[1.4vw] leading-6 tracking-tighter">
           Private Jets character <br /> World wide
         </h1>

@@ -4,6 +4,10 @@ import Mandrinking from "../../assets/Images/Mandrinking.Webp"
 import PetsSeeing from "../../assets/Images/PetsSeeing.Webp"
 import Airport from "../../assets/Images/Airport.Webp"
 import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
+
+gsap.registerPlugin(ScrollTrigger);
 const Advantages = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -12,6 +16,41 @@ const Advantages = () => {
     const [time, setTime] = useState("");
 
 
+
+    const container = {
+      hidden: {},
+      show: {
+        transition: {
+          staggerChildren: 0.8,
+        },
+      },
+    };
+    
+    const leftVariant = {
+      hidden: { x: -160, opacity: 0 },
+      show: {
+        x: 0,
+        opacity: 1,
+        transition: {
+          duration: 1.1,
+          ease: [0.22, 1, 0.36, 1], // luxury ease
+        },
+      },
+    };
+    
+    
+    const rightVariant = {
+      hidden: { x: 160, opacity: 0 },
+      show: {
+        x: 0,
+        opacity: 1,
+        transition: {
+          duration: 1.3,
+          ease: [0.22, 1, 0.36, 1],
+        },
+      },
+    };
+    
    
 
     useEffect(() => {
@@ -93,10 +132,15 @@ const Advantages = () => {
       ];
   
   return (
-    <div className='   px-12 py-13  w-full'>
+    <motion.div id="Advantages"   variants={container}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.8 }} className='   px-12 py-20  w-full'>
+
+
         <div className='h-full w-full grid grid-cols-2'>
         <div className='h-full  '>
-        <div className='h-full  lg:px-12 '>
+        <motion.div variants={leftVariant}  className='h-full  lg:px-12 '>
            <div className="lg:py-12  py-9  px-4">
       <div className="lg:space-y-1 space-y-10">
         {faqs.map((faq, index) => (
@@ -120,16 +164,16 @@ const Advantages = () => {
         ))}
       </div>
     </div>
+        </motion.div>
         </div>
-        </div>
-        <div className='h-fit w-full flex items-center justify-center overflow-hidden '>
+        <motion.div variants={rightVariant} className='h-fit w-full flex items-center justify-center overflow-hidden '>
             <img  
                 ref={imageRef}
 
     src={faqs[activeIndex]?.image}
  className=' rounded-2xl h-130 w-100 object-cover   transition-all duration-500
              ' alt="" />
-        </div>
+        </motion.div>
       
         </div>
       
@@ -156,7 +200,7 @@ const Advantages = () => {
       
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
