@@ -125,26 +125,30 @@ const App = () => {
       <div className='h-full w-full '>
         <Home/>
         <Aboutus/>
-        <div className=' bg-gradient-to-b from-[#D6CEC5] to-[#FCF6EB] h-full w-full'>
+        <div className=' bg-gradient-to-b from-[#D6CEC5] to-[#FCF6EB]  w-full'>
         <OurFloot/>
+
+        {/* gulstream */}
+
+
      <motion.div  variants={container}
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.8 }} className='h-screen p-7 px-20   w-full  grid grid-cols-3'>
+  viewport={{ once: true, amount: 0.8 }} className='h-screen  2xl:bg-gray-600 l md:py-9 md:h-full md:px-6 lg:p-7 lg:px-5 xl:px-10    w-full  grid lg:grid-cols-3'>
             <motion.div     variants={leftVariant}
   className='h-full py-10 flex items-center justify-between flex-col w-full '>
              <div   className='Gt3  text-[#312726] w-full '>
-              <h2 className='tracking-tighter text-1xl'> Gulfstream</h2>
-              <h4  className='tracking-tighter mt-4 text-7xl'>650ER</h4>
+              <h2 className='tracking-tighter lg:text-1xl md:text-3xl'> Gulfstream</h2>
+              <h4  className='tracking-tighter mt-4 text-7xl md:text-8xl'>650ER</h4>
              </div>
-             <div  className=' w-full  grid grid-cols-2'>
+             <div  className=' w-full  grid grid-cols-2 md:mt-12'>
              <div className='h-full w-full flex items-center gap-7 justify-start flex-col'>
               {
                 planeranks.map((elem,index)=>{
                   return(
                   <div key={index}  className='Gt3   w-full' style={{backgroundColor:elem.bg}}>
-                    <h3 className='tracking-tighter text-[0.7vw]'>{elem.tittle}</h3>
-                    <h2 className='tracking-tighter text-[0.7vw]'>{elem.desc}</h2>
+                    <h3 className='tracking-tighter lg:text-[0.7vw]'>{elem.tittle}</h3>
+                    <h2 className='tracking-tighter lg:text-[0.7vw]'>{elem.desc}</h2>
                   </div>
                      
                   )  
@@ -157,8 +161,8 @@ const App = () => {
                 planeranksmarket.map((elem,index)=>{
                   return(
                   <div key={index}  className='Gt3   w-full' style={{backgroundColor:elem.bg}}>
-                    <h3 className='tracking-tighter text-[0.7vw]'>{elem.tittle}</h3>
-                    <h2 className='tracking-tighter text-[0.7vw]'>{elem.desc}</h2>
+                    <h3 className='tracking-tighter lg:text-[0.7vw]'>{elem.tittle}</h3>
+                    <h2 className='tracking-tighter lg:text-[0.7vw]'>{elem.desc}</h2>
                   </div>
                      
                   )  
@@ -170,19 +174,19 @@ const App = () => {
             </motion.div>
             <motion.div     variants={centerVariant}
  className='h-full w-full '>
-              <img src={FlatAeroplane} className='h-full p-5 w-full object-cover' alt="" />
+              <img src={FlatAeroplane} className='h-full  lg:p-5 md:p-20 w-full object-cover' alt="" />
             </motion.div>
             <motion.div         variants={rightVariant}
 
- className='h-full flex items-end justify-center gap-6 flex-col w-full '>
+ className='h-full flex items-end md:mt-7 justify-center gap-6 flex-col w-full '>
              <div className='Gt3  text-[#312726] w-full '>
-              <h2 className='tracking-tighter text-1xl text-right'>Ultra-long-range <br /> Aircraft              </h2>
+              <h2 className='tracking-tighter text-1xl md:text-3xl lg:text-right md:text-center'>Ultra-long-range <br /> Aircraft              </h2>
              </div>
-             <div className=' w-full  grid grid-cols-1  '>
-             <div className='h-full w-full flex items-end gap-7 justify-end flex-col'>
-                  <div   className='Gt3 flex items-end justify-end flex-col gap-6   w-full'>
-                    <h3 className='tracking-tighter text-[0.7vw]  '>Direct Access to Private Travel                    </h3>
-                    <h3 className='tracking-tighter text-[0.7vw] text-right'>A true time-saving machine it brings Tokyo and New York an hour closer, and at 92% of the speed of sound, it can circle the globe with just a single stop.
+             <div className=' w-full   grid grid-cols-1  '>
+             <div className='h-full w-full flex lg:items-end lg:gap-7 lg:justify-end md:items-center md:justify-center flex-col'>
+                  <div   className='Gt3 flex lg:items-end lg:justify-end md:items-center md:justify-center  flex-col lg:gap-6   w-full'>
+                    <h3 className='tracking-tighter lg:text-[0.9vw] md:text-2xl  '>Direct Access to Private Travel                    </h3>
+                    <h3 className='tracking-tighter lg:text-[1.2vw] md:text-[2.3vw] md:text-center  lg:text-right'>A true time-saving machine it brings Tokyo and New York an hour closer, and at 92% of the speed of sound, it can circle the globe with just a single stop.
 
 </h3>
                   </div>

@@ -44,13 +44,13 @@ const Loader = () => {
   return (
     <div
       ref={loaderRef}
-      className="fixed inset-0 z-[99999] bg-[#1E1A16] flex items-center justify-center"
+      className="fixed inset-0 z-[99999]  bg-[#1E1A16] flex items-center justify-center"
     >
       <div
         ref={textRef}
         className="text-white flex flex-col items-center gap-3"
       >
-        <h1 className="text-center Gt3 text-[1.4vw] leading-6 tracking-tighter">
+        <h1 className="text-center Gt3 lg:text-[1.4vw] md:text-4xl text-2xl lg:leading-6 md:leading-12 leading-7  tracking-tighter">
           Private Jets character <br /> World wide
         </h1>
       </div>

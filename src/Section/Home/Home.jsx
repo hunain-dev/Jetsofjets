@@ -34,7 +34,7 @@ const Home = () => {
               transformOrigin: "center center",
             },
             {
-              scale: 6.1,
+              scale: 8.2,
               ease: "none",
             },
             0
@@ -49,7 +49,7 @@ const Home = () => {
 
             },
             {
-                scale: 6.1,
+              scale: 8.2,
               ease: "none",
             },
             0
@@ -105,7 +105,7 @@ const Home = () => {
 
  
     </div>        </div>
-        <div className='h-full w-full  absolute top-0 left-0 '>
+        <div className='h-full w-full lg:p-0 p-6  absolute top-0 left-0 '>
             <img    ref={imageRef} 
  src={jetshome} className='h-full w-full object-cover object-center' alt="" />
 
@@ -113,19 +113,21 @@ const Home = () => {
   ref={textRef}
   className="
     absolute inset-0
-    grid grid-cols-2
+    grid lg:grid-cols-2
     pointer-events-none
     z-[60]
-    px-45
-    gap-40
+    lg:px-45
+    px-15
+    md:px-16
+    lg:gap-40
     
     ">
-  <div className="flex flex-col items-center text-white justify-center gap-20 mt-8">
-    <div className="Gt3  h-[23vh] leading-12  w-full  flex items-center justify-start">
-      <h1 className="text-[4.3vw] tracking-tighter">We are<br />movement</h1>
+  <div className="flex  flex-col  lg:px-0 md:px-10   items-center  text-white justify-center lg:gap-20  lg:mt-8 mt-20">
+    <div className="Gt3 lg:leading-12  w-full  flex items-center justify-start">
+      <h1 className="lg:text-[4vw] xl:text-[4.3vw] text-4xl md:text-7xl tracking-tighter">We are<br />movement</h1>
     </div>
-    <div className=" w-full flex items-start justify-start gap-10 flex-col  ">
-        <h2 className="Gt3 tracking-tighter leading-4">Your <br />Freedom to <br />Enjoy life</h2>
+    <div className="lg:opacity-100    opacity-0 md:opacity-0 w-full flex items-start justify-start gap-10 flex-col  ">
+        <h2 className="Gt3 tracking-tighter    leading-4">Your <br />Freedom to <br />Enjoy life</h2>
         <div className="h-full w-full">
             <h3 className="text-[0.9vw] leading-3.5 w-3xs">Every flight is designed around your comfort, time, and ambitions — so you can focus on what truly matters, while we take care of everything else." </h3>
 
@@ -133,10 +135,10 @@ const Home = () => {
     </div>
   </div>
 
-  <div className="h-full w-full  flex   items-end py-30 justify-end  ">
-    <div className="gap-16 flex items-center justify-between flex-col w-full text-white ">
-        <h2 className="Gt3 leading-14 text-6xl tracking-tighter text-right">We are <br /> distinction</h2>
-        <div className="Gt  uppercase flex items-center justify-between py-3 w-full  border-t-1 border-t-white">
+  <div className="h-full w-full    flex   lg:items-end items-start   lg:py-30 py-12 justify-end    ">
+    <div className="lg:gap-16   flex items-center justify-between  flex-col  w-full text-white ">
+        <h2 className="Gt3  xl:leading-14 leading-10  xl:text-6xl lg:text-5xl text-4xl   md:text-7xl tracking-tighter text-right">We are <br /> distinction</h2>
+        <div className="Gt lg:opacity-100 opacity-0 md:opacity-0  uppercase flex items-center justify-between py-3 w-full  border-t-1 border-t-white">
             <a href="#Aboutus" className=" cursor-pointer text-[0.8vw]">Scroll down</a>
             <h2 className="text-[0.8vw]">Start the journey</h2>
         </div>

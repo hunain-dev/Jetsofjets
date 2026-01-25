@@ -135,14 +135,14 @@ const Advantages = () => {
     <motion.div id="Advantages"   variants={container}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.8 }} className='   px-12 py-20  w-full'>
+    viewport={{ once: true, amount: 0.8 }} className=' md:px-0   px-12 lg:py-20 md:py-10  w-full'>
 
 
-        <div className='h-full w-full grid grid-cols-2'>
+        <div className='h-full w-full lg:mt-0 mt-20 grid lg:grid-cols-2'>
         <div className='h-full  '>
         <motion.div variants={leftVariant}  className='h-full  lg:px-12 '>
            <div className="lg:py-12  py-9  px-4">
-      <div className="lg:space-y-1 space-y-10">
+      <div className="lg:space-y-1 space-y-10 md:space-y-12">
         {faqs.map((faq, index) => (
           <div
             key={index}
@@ -150,7 +150,7 @@ const Advantages = () => {
             onClick={() => toggleFAQ(index)}
           >
             <div className="figee flex justify-between items-center">
-              <h3 className="Gt3 lg:text-[1.6vw] text-[4.4vw] md:text-[2.1vw] text-[#222221FF] ">{faq.question}</h3>
+              <h3 className="Gt3 lg:text-[1.6vw]  text-[4.4vw] md:text-[4vw] text-[#222221FF] ">{faq.question}</h3>
               <span className="text-xl">{activeIndex === index ? "−" : "+"}</span>
             </div>
             <div
@@ -158,7 +158,7 @@ const Advantages = () => {
                 activeIndex === index ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0"
               }`}
             >
-              <p className="Gt3 text-[0.6vw] ">{faq.answer}</p>
+              <p className="Gt3 lg:text-[1vw] md:text-2xl ">{faq.answer}</p>
             </div>
           </div>
         ))}
@@ -166,36 +166,36 @@ const Advantages = () => {
     </div>
         </motion.div>
         </div>
-        <motion.div variants={rightVariant} className='h-fit w-full flex items-center justify-center overflow-hidden '>
+        <motion.div variants={rightVariant} className='h-fit md:px-3 w-full flex items-center justify-center overflow-hidden '>
             <img  
                 ref={imageRef}
 
     src={faqs[activeIndex]?.image}
- className=' rounded-2xl h-130 w-100 object-cover   transition-all duration-500
+ className=' rounded-2xl lg:h-130 lg:w-100 md:h-160 md:w-full object-cover   transition-all duration-500
              ' alt="" />
         </motion.div>
       
         </div>
       
 
-      <div className='py-3 mt-7 w-full px-12 py-4 border-t-1 border-gray-500  grid grid-cols-2'>
+      <div className='py-3 mt-7 w-full px-12 py-4 border-t-1 border-gray-500  grid lg:grid-cols-2'>
         <div className='h-full  '>
-            <h2 className='Gt3 opacity-40 text-[0.8vw]'>
+            <h2 className='Gt3 opacity-40 tlg:ext-[0.8vw]'>
             Countries supported</h2>
-            <h2 className='Gt3  text-[0.8vw]'>
+            <h2 className='Gt3  lg:text-[1vw]'>
             174</h2>
         </div>
         <div className='h-full  flex items-start justify-between' >
-            <div>    <h2 className='Gt3 opacity-40 text-[0.9vw]'>
+            <div>    <h2 className='Gt3 opacity-40 lg:text-[1.2vw]'>
             Based in
 </h2>
-            <h2 className='Gt3  text-[0.5vw]'>
+            <h2 className='Gt3  lg:text-[0.7vw]'>
             Dubai, OAE
 </h2></div>
-<div className='flex items-center justify-center' >    <h2 className='Gt3 opacity-40 text-[0.5vw]'>
+<div className='flex items-center justify-center lg:gap-2 gap-3' >    <h2 className='Gt3 opacity-40 lg:text-[0.8vw]'>
             Local time
 </h2>
-<h2 className="Gt3 text-2xl text-right">{time}</h2>
+<h2 className="Gt3 lg:text-2xl md:text-2xl text-right">{time}</h2>
 </div>
       
         </div>

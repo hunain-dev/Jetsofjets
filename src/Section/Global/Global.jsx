@@ -25,10 +25,10 @@ const Global = () => {
   />         </div>
       </div>
       <div className=" h-full w-full text-white py-7 px-20  flex items-end justify-end  absolute top-0 left-0 ">
-        <div className=" h-[70vh] w-full  grid grid-cols-2">
+        <div className="h-full pt-30  w-full   grid lg:grid-cols-2 md:grid-cols-1 ">
           <div className="h-full  grid grid-cols-1">
             <div className=" w-full ">
-              <h3 className="Gt3 text-2xl tracking-tighter leading-7">
+              <h3 className="Gt3 lg:text-2xl xl:text-4xl  lg:leading-8 xl:leading-10  lg:text-left md:text-center md:text-4xl md:leading-10 tracking-tighter leading-7">
 
 
 Fly anywhere with <br />
@@ -37,22 +37,22 @@ control
 
               </h3>
               </div> 
-            <div className="Gt2 w-full  flex items-end justify-start gap-4">
-              <h2 className="text-sm">©2026 jesko jets. All rights reserved
+            <div className="Gt2 w-full flex lg:items-end md:items-center lg:flex-row md:flex-col lg:justify-start gap-4">
+              <h2 className="xl:text-sm lg:text-[1.2vw] md:text-3xl md:text-center">©2026 jesko jets. All rights reserved
               </h2>
-              <h4 className="text-sm">Privacy policy</h4>
+              <h4 className="xl:text-sm lg:text-[1.2vw]  md:text-3xl">Privacy policy</h4>
               
               </div> 
             </div>
             <div className="h-full  grid grid-cols-1">
-            <div className=" w-full flex items-end  justify-start flex-col ">
-              <h3 className="Gt3 text-1xl tracking-tighter leading-7">Info@jeskojets.com</h3>
-              <h3 className="Gt3 text-1xl tracking-tighter ">+91 54 432 5050</h3>
+            <div className=" w-full flex lg:items-end  md:justify-start md:items-center md:gap-2  lg:justify-start flex-col ">
+              <h3 className="Gt3 text-1xl md:text-3xl xl:text-3xl lg:text-[2.5vw] tracking-tighter leading-7">Info@jeskojets.com</h3>
+              <h3 className="Gt3 text-1xl l md:text-3xl  xl:text-3xl lg:text-[2.5vw] tracking-tighter ">+91 54 432 5050</h3>
               </div> 
-            <div className="Gt2 w-full  flex items-end justify-end gap-4">
-              <h2 className="text-sm">Made my
+            <div className="Gt2 w-full  flex lg:items-end lg:justify-end md:justify-start md:items-center md:flex-col gap-4 lg:flex-row">
+              <h2 className="lg:text-sm md:text-3xl ">Made my
               </h2>
-              <h4 className="text-sm">The first the Last</h4>
+              <h4 className="lg:text-sm md:text-4xl ">The first the Last</h4>
               
               </div> 
             </div>
