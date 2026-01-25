@@ -14,12 +14,16 @@ const App = () => {
   const scrollRef = useRef(null);
 
 
-  const container = {
-    hidden: {},
+
+{/* gulstream  anaimtion*/}
+
+   const container = {
+    hidden: { opacity: 1 },
     show: {
-      transition: {
-        staggerChildren: 0.8,
-      },
+      opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
     },
   };
   
@@ -131,15 +135,15 @@ const App = () => {
         {/* gulstream */}
 
 
-     <motion.div  variants={container}
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true, amount: 0.8 }} className='h-screen  2xl:bg-gray-600 l md:py-9 md:h-full md:px-6 lg:p-7 lg:px-5 xl:px-10    w-full  grid lg:grid-cols-3'>
+<motion.div  variants={container}
+initial="hidden"
+whileInView="show"
+viewport={{ once: true, amount: 0.25 }} className='h-full    l md:py-9 md:h-full md:px-6 lg:p-7 lg:px-5 xl:px-10 px-4  w-full  grid lg:grid-cols-3'>
             <motion.div     variants={leftVariant}
-  className='h-full py-10 flex items-center justify-between flex-col w-full '>
+  className='h-full py-10  flex items-center justify-between flex-col w-full '>
              <div   className='Gt3  text-[#312726] w-full '>
               <h2 className='tracking-tighter lg:text-1xl md:text-3xl'> Gulfstream</h2>
-              <h4  className='tracking-tighter mt-4 text-7xl md:text-8xl'>650ER</h4>
+              <h4  className='tracking-tighter mt-4 text-6xl md:text-8xl'>650ER</h4>
              </div>
              <div  className=' w-full  grid grid-cols-2 md:mt-12'>
              <div className='h-full w-full flex items-center gap-7 justify-start flex-col'>
@@ -147,8 +151,8 @@ const App = () => {
                 planeranks.map((elem,index)=>{
                   return(
                   <div key={index}  className='Gt3   w-full' style={{backgroundColor:elem.bg}}>
-                    <h3 className='tracking-tighter lg:text-[0.7vw]'>{elem.tittle}</h3>
-                    <h2 className='tracking-tighter lg:text-[0.7vw]'>{elem.desc}</h2>
+                    <h3 className='tracking-tighter lg:text-[0.7vw] text-[3vw]'>{elem.tittle}</h3>
+                    <h2 className='tracking-tighter lg:text-[0.7vw] text-[3vw]'>{elem.desc}</h2>
                   </div>
                      
                   )  
@@ -161,8 +165,8 @@ const App = () => {
                 planeranksmarket.map((elem,index)=>{
                   return(
                   <div key={index}  className='Gt3   w-full' style={{backgroundColor:elem.bg}}>
-                    <h3 className='tracking-tighter lg:text-[0.7vw]'>{elem.tittle}</h3>
-                    <h2 className='tracking-tighter lg:text-[0.7vw]'>{elem.desc}</h2>
+                    <h3 className='tracking-tighter lg:text-[0.7vw] text-[3vw]'>{elem.tittle}</h3>
+                    <h2 className='tracking-tighter lg:text-[0.7vw] text-[3vw]'>{elem.desc}</h2>
                   </div>
                      
                   )  
@@ -174,12 +178,12 @@ const App = () => {
             </motion.div>
             <motion.div     variants={centerVariant}
  className='h-full w-full '>
-              <img src={FlatAeroplane} className='h-full  lg:p-5 md:p-20 w-full object-cover' alt="" />
+              <img src={FlatAeroplane} className='h-full  lg:p-5 md:p-20 p-10 w-full object-cover' alt="" />
             </motion.div>
             <motion.div         variants={rightVariant}
 
  className='h-full flex items-end md:mt-7 justify-center gap-6 flex-col w-full '>
-             <div className='Gt3  text-[#312726] w-full '>
+             <div className='Gt3  text-[#312726] w-full lg:mt-0 mt-6'>
               <h2 className='tracking-tighter text-1xl md:text-3xl lg:text-right md:text-center'>Ultra-long-range <br /> Aircraft              </h2>
              </div>
              <div className=' w-full   grid grid-cols-1  '>

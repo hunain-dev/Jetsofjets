@@ -94,17 +94,17 @@ const Aboutus = () => {
         
     ]
   return (
-<div id="Aboutus"   className="lg:h-[200vh]  2xl:bg-red-400  lg:py-0 py-6 w-full bg-[#2875B7] relative">
+<div id="Aboutus"   className="lg:h-[200vh]   lg:py-0 py-6 w-full bg-[#2875B7] relative">
 <div className='back h-full w-full'>
         <img src={Aboutclouds} className='h-full w-full object-cover' alt="" />
         </div>
         <div className='front lg:pt-20 pt-10 lg:px-20 px-5    h-full w-full  absolute top-0 left-0'>
             <div className='w-full '>
-                <h2  ref={(el) => (textRef.current[0] = el)} className='text-white  Gt3 tracking-tighter lg:leading-14 lg:text-[3.4vw] md:text-6xl text-2xl'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
+                <h2  ref={(el) => (textRef.current[0] = el)} className='text-white  Gt3 tracking-tighter xl:leading-14 leading-9  xl:text-[3.4vw] lg:text-4xl md:text-6xl text-2xl'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
                 </h2>
             </div>
 
-            <div className=' text-white lg:mt-15 md:mt-30 mt-10 w-full  grid lg:grid-cols-2'>
+            <div className=' text-white lg:mt-15 2xl:mt-30 md:mt-30 mt-10 w-full  grid lg:grid-cols-2'>
                 <div className='h-full w-full flex lg:items-start items-center lg:justify-start justify-between gap-5 '>
                     <div className=' flex items-center   gap-3 justify-start  '>
                     <svg className='w-9 md:w-13' viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

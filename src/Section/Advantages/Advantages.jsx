@@ -16,15 +16,16 @@ const Advantages = () => {
     const [time, setTime] = useState("");
 
 
-
     const container = {
-      hidden: {},
+      hidden: { opacity: 1 },
       show: {
-        transition: {
-          staggerChildren: 0.8,
-        },
+        opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
       },
     };
+    
     
     const leftVariant = {
       hidden: { x: -160, opacity: 0 },
@@ -132,11 +133,11 @@ const Advantages = () => {
       ];
   
   return (
-    <motion.div id="Advantages"   variants={container}
+    <div id="Advantages"    variants={container}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.8 }} className=' md:px-0   px-12 lg:py-20 md:py-10  w-full'>
-
+    viewport={{ once: true, amount: 0.25 }}
+    className=' md:px-0   px-3 lg:py-20 md:py-10  w-full'>
 
         <div className='h-full w-full lg:mt-0 mt-20 grid lg:grid-cols-2'>
         <div className='h-full  '>
@@ -178,14 +179,14 @@ const Advantages = () => {
         </div>
       
 
-      <div className='py-3 mt-7 w-full px-12 py-4 border-t-1 border-gray-500  grid lg:grid-cols-2'>
+      <div className='py-3 mt-7 w-full lg:px-12 py-4 border-t-1 border-gray-500  grid lg:grid-cols-2'>
         <div className='h-full  '>
-            <h2 className='Gt3 opacity-40 tlg:ext-[0.8vw]'>
+            <h2 className='Gt3 opacity-40 lg:text-[0.8vw] text-1xl'>
             Countries supported</h2>
             <h2 className='Gt3  lg:text-[1vw]'>
             174</h2>
         </div>
-        <div className='h-full  flex items-start justify-between' >
+        <div className='h-full  flex items-start justify-between lg:flex-row flex-col' >
             <div>    <h2 className='Gt3 opacity-40 lg:text-[1.2vw]'>
             Based in
 </h2>
@@ -200,7 +201,7 @@ const Advantages = () => {
       
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

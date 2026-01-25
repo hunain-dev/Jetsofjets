@@ -34,7 +34,7 @@ const Home = () => {
               transformOrigin: "center center",
             },
             {
-              scale: 8.2,
+              scale: 10.2,
               ease: "none",
             },
             0
@@ -49,7 +49,7 @@ const Home = () => {
 
             },
             {
-              scale: 8.2,
+              scale: 10.2,
               ease: "none",
             },
             0
@@ -124,7 +124,7 @@ const Home = () => {
     ">
   <div className="flex  flex-col  lg:px-0 md:px-10   items-center  text-white justify-center lg:gap-20  lg:mt-8 mt-20">
     <div className="Gt3 lg:leading-12  w-full  flex items-center justify-start">
-      <h1 className="lg:text-[4vw] xl:text-[4.3vw] text-4xl md:text-7xl tracking-tighter">We are<br />movement</h1>
+      <h1 className="lg:text-[4vw] xl:text-[4.3vw] text-4xl md:text-6xl tracking-tighter">We are<br />movement</h1>
     </div>
     <div className="lg:opacity-100    opacity-0 md:opacity-0 w-full flex items-start justify-start gap-10 flex-col  ">
         <h2 className="Gt3 tracking-tighter    leading-4">Your <br />Freedom to <br />Enjoy life</h2>
@@ -136,8 +136,8 @@ const Home = () => {
   </div>
 
   <div className="h-full w-full    flex   lg:items-end items-start   lg:py-30 py-12 justify-end    ">
-    <div className="lg:gap-16   flex items-center justify-between  flex-col  w-full text-white ">
-        <h2 className="Gt3  xl:leading-14 leading-10  xl:text-6xl lg:text-5xl text-4xl   md:text-7xl tracking-tighter text-right">We are <br /> distinction</h2>
+    <div className="lg:gap-16  flex items-center justify-between  flex-col  w-full text-white ">
+        <h2 className="Gt3  xl:leading-14 leading-10 lg:leading-11  xl:text-6xl lg:text-5xl text-4xl md:leading-15   md:text-6xl tracking-tighter text-right">We are <br /> distinction</h2>
         <div className="Gt lg:opacity-100 opacity-0 md:opacity-0  uppercase flex items-center justify-between py-3 w-full  border-t-1 border-t-white">
             <a href="#Aboutus" className=" cursor-pointer text-[0.8vw]">Scroll down</a>
             <h2 className="text-[0.8vw]">Start the journey</h2>
