@@ -41,7 +41,7 @@ const formhandler = (e) =>{
     setOpenpopup(false);
   };
   return (
-<div className='    h-1/4   md:h-1/3 lg:h-2/5 xl:h-1/2
+<div className='    h-4/6   md:h-1/3 lg:h-2/5 xl:h-1/2
  pointer-events-none overflow-hidden lg:p-5 md:p-10 cursor-pointer lg:px-15 flex items-end justify-center w-full fixed bottom-0 z-50'>
 <div className="back h-full cursor-pointer pointer-events-auto  overflow-hidden w-full flex items-end justify-center relative">
       <div onClick={buttonHandler}  className="
@@ -78,7 +78,7 @@ className='lg:py-2 lg:px-2 md:px-4 md:py-4 p-2 bg-white rounded-full'>
   transition={{ duration: 0.5, ease: "easeInOut" }}
 
 
-className="w-full   py-13 overflow-hidden   flex items-center justify-evenly  absolute bottom-0 left-0 bg-white rounded-3xl">
+className="lg:w-fit w-full   lg:py-13  lg:px-6    flex items-center justify-evenly lg:flex-row md:flex-col flex-col xl:flex-row   absolute bottom-0 left-0 bg-white lg:rounded-3xl">
   <motion.div   initial={{ y: 50, opacity: 0 }}
   animate={{ y: 0, opacity: 1 }}
   exit={{ y: 50, opacity: 0 }}
@@ -87,12 +87,12 @@ className="w-full   py-13 overflow-hidden   flex items-center justify-evenly  ab
   <IoIosClose className="text-4xl"  onClick={Close} />
 
   </motion.div>
-  <div className="Gt3  h-full flex items-center justify-start">
+  <div className="Gt3 lg:p-0 lg:px-0 px-0 p-5  h-full flex items-center justify-start">
     <h2 className="text-black text-3xl">Contact</h2>
   </div>
-  <div className="h-full  flex items-center justify-center ">
-    <form action="" onSubmit={formhandler}>
-    <div className=" flex items-center justify-center gap-10 w-full ">
+  <div className="h-full w-full  lg:px-13 px-5 flex items-center justify-center gap-10   ">
+    <form action="" onSubmit={formhandler} className="flex items-end justify-end h-full w-full">
+    <div className="  flex items-center justify-center lg:flex-row  gap-6 flex-col lg:gap-5   w-full ">
    
    <TextField
          id="filled-multiline-flexible"
@@ -148,9 +148,9 @@ className="w-full   py-13 overflow-hidden   flex items-center justify-evenly  ab
        
        />
 
-         <div className="h-full w-fit px-5 flex items-center justify-center ">
-  <button className='py-2 px-2 bg-black text-white rounded-full'>
-<IoPaperPlane className='text-1xl' />
+         <div className="h-full lg:w-fit w-full px-5 flex items-center justify-center ">
+  <button className='lg:py-2  lg:px-2 py-3  px-14  bg-black text-white rounded-full'>
+<IoPaperPlane className='lg:text-1xl text-2xl' />
 </button>
   </div>  
    </div>
