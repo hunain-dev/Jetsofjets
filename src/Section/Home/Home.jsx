@@ -74,7 +74,7 @@ const Home = () => {
     <div  id="home"     ref={containerRef}
     className='h-screen w-full relative overflow-hidden '>
         <div className='h-full w-full  relative'>
-            <img src={backclouds} alt="clouds image" className='h-full w-full object-cover' />
+            <img  loading="lazy"  src={backclouds} alt="clouds image" className='h-full w-full object-cover' />
 
 
             <div className=" h-full  w-full overflow-hidden absolute top-0 left-0 items-center justify-center">
@@ -83,20 +83,20 @@ const Home = () => {
     
     {/* first set */}
     <div className=" w-full grid grid-cols-4">
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}  loading="lazy"className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}   loading="lazy"className="h-full w-full object-contain" alt="" />
 
                 </div>
       
 
     {/* second set (duplicate for infinite loop) */}
     <div className=" w-full grid grid-cols-4">
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
-              <img src={cloudy} className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src={cloudy}  loading="lazy" className="h-full w-full object-contain" alt="" />
 
                 </div>
       
@@ -107,7 +107,7 @@ const Home = () => {
     </div>        </div>
         <div className='h-full w-full lg:p-0 p-6  absolute top-0 left-0 '>
             <img    ref={imageRef} 
- src={jetshome} className='h-full w-full object-cover object-center' alt="" />
+ src={jetshome }  loading="lazy" className='h-full w-full object-cover object-center' alt="" />
 
 <div
   ref={textRef}

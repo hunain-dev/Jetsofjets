@@ -98,6 +98,7 @@ exceptional range and top-end speed.</h4>
     className="absolute bottom-0 left-0 w-full   lg:h-svw  z-20 pointer-events-none"
     >
     <img
+     loading="lazy"
       src={plane}
       className="w-full h-full lg:object-contain object-cover"
       alt="plane"

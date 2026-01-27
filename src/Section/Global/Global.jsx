@@ -13,6 +13,7 @@ const Global = () => {
          </div>
          <div className="h-full w-full  absolute  top-0 left-0 ">
          <motion.img
+          loading="lazy"
     src={Eearth}
     alt="Earth"
     className='h-full w-full object-contain'

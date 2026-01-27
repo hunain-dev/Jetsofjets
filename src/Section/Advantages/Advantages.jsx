@@ -169,6 +169,7 @@ const Advantages = () => {
         </div>
         <motion.div variants={rightVariant} className='h-fit md:px-3 w-full flex items-center justify-center overflow-hidden '>
             <img  
+             loading="lazy"
                 ref={imageRef}
 
     src={faqs[activeIndex]?.image}
