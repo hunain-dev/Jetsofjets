@@ -1,35 +1,8 @@
-import { IoPaperPlane } from "react-icons/io5";
-import TextField from '@mui/material/TextField';
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { IoIosClose } from "react-icons/io";
-
+import React, { useState } from 'react'
+import { IoIosClose, IoIosSend } from "react-icons/io";
+import TextField from "@mui/material/TextField";
 
 const Ourfligths = () => {
-  
-const [name, setname] = useState("")
-const [Email, setEmail] = useState("")
-const [password, setpassword] = useState("")
-const [Arrvining, setArrvining] = useState("")
-
-const formhandler = (e) =>{
-  e.preventDefault();
-  // console.log(`your name ${name}, your email ${Email} your password ${password} Arrvining ${Arrvining} `)
-
-  setname("")
-  setEmail("")
-  setpassword("")
-  setArrvining("")
-  if (Email && password && name && Arrvining) {
-    alert("your data hass been submited")
-    
-  }else{
-    alert("your logic not submitted")
-  }
-
-}
-
-
   const [Openpopup, setOpenpopup] = useState(false)
 
   const buttonHandler = () => {
@@ -40,72 +13,58 @@ const formhandler = (e) =>{
     const Close = () => {
     setOpenpopup(false);
   };
+
   return (
-<div className='    h-4/6   md:h-1/3 lg:h-2/5 xl:h-1/2
- pointer-events-none overflow-hidden lg:p-5 md:p-10 cursor-pointer lg:px-15 flex items-end justify-center w-full fixed bottom-0 z-50'>
-<div className="back h-full cursor-pointer pointer-events-auto  overflow-hidden w-full flex items-end justify-center relative">
-      <div onClick={buttonHandler}  className="
-
-overflow-hidden
-p-1
-  rounded-full
-  bg-white/20
-  backdrop-blur-md
-   gap-1
-   flex items-center justify-center
-  border border-white/30
-  shadow-lg
-  md:p-3
-  lg:p-2
+    <div className='h-screen w-full   lg:py-6 lg:px-13 flex items-end justify-end fixed z-999'>
+      <div className='lg:min-h-[30vh] min-h-[60vh]  flex items-end justify-end  w-full  relative '>
   
+  {/* Our fight button */}
 
-">
-<div className='Gt2   lg:py-2 py-1 px-4 lg:px-4 md:py-3 md:px-9 flex items-center justify-center h-full  rounded-full bg-white'>
-    <h2 className='lg:text-[1.1vw] md:text-3xl text-1xl'>Book the flight</h2>
-</div>
-<div     
-className='lg:py-2 lg:px-2 md:px-4 md:py-4 p-2 bg-white rounded-full'>
-<IoPaperPlane className='lg:text-[1.2vw] text-1xl md:text-4xl' />
-</div>
-</div>  
-
-{
-  Openpopup && (
-<motion.div
-  initial={{ y: 50, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  exit={{ y: 50, opacity: 0 }}
-  transition={{ duration: 0.5, ease: "easeInOut" }}
-
-
-className="lg:w-fit w-full   lg:py-13  lg:px-6    flex items-center justify-evenly lg:flex-row md:flex-col flex-col xl:flex-row   absolute bottom-0 left-0 bg-white lg:rounded-3xl">
-  <motion.div   initial={{ y: 50, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  exit={{ y: 50, opacity: 0 }}
-  transition={{ duration: 0.5, ease: "easeInOut" }}
- className="absolute flex items -center justify-end text-black top-1  right-2  ">
-  <IoIosClose className="text-4xl"  onClick={Close} />
-
-  </motion.div>
-  <div className="Gt3 lg:p-0 lg:px-0 px-0 p-5  h-full flex items-center justify-start">
-    <h2 className="text-black text-3xl">Contact</h2>
+  <div className='h-full  w-full    flex items-end justify-center  ' >
+    <button onClick={buttonHandler} className='p-1 px-2
+    flex items-center justify-between gap-1
+    rounded-full
+    backdrop-blur-md
+    bg-white/20
+    border border-white/30
+    shadow-[0_8px_30px_rgba(0,0,0,0.25)]
+    text-white
+    transition-all duration-300 ease-out
+    active:scale-[0.97]'>
+      <div className='cursor-pointer  flex items-center  w-full p-1 px-4 rounded-full  justify-center bg-white text-black'>
+      <h2 className='Gt2 lg:text-[1.1vw]  mt-1 tracking-tighter '>Book the flight</h2>
+      </div>
+ 
+       <div className='p-2 rounded-full  bg-white text-black'>
+       <IoIosSend className='cursor-pointer text-1xl' />
+       </div>
+    </button>
   </div>
-  <div className="h-full w-full  lg:px-13 px-5 flex items-center justify-center gap-10   ">
-    <form action="" onSubmit={formhandler} className="flex items-end justify-end h-full w-full">
-    <div className="  flex items-center justify-center lg:flex-row  gap-6 flex-col lg:gap-5   w-full ">
+
+  {/* our flight form */}
+
+
+ {
+  Openpopup && (
+    <div className='h-full w-full opacity-100 lg:rounded-3xl flex items-center justify-start overflow-hidden lg:flex-row flex-col absolute top-0 left-0 lg:bg-white bg-white'>
    
-   <TextField
+        <div onClick={Close}  className='py-3 px-3 w-fit  absolute top-0 right-0'>
+        <IoIosClose className='cursor-pointer text-4xl' />
+
+        </div>
+    <div className='h-full flex items-center justify-center px-5  '>
+      <h2 className='Gt3 text-3xl'>Contact</h2>
+    </div>
+    <div className=' h-full w-full   px-3'>
+        <form action="" className='h-full flex items-center justify-start lg:flex-row flex-col lg:gap-12 gap-5 w-full '> 
+        <TextField
          id="filled-multiline-flexible"
          label="Name"
          multiline
          className="Gt3"
          maxRows={3}
-         value={name}
          required
-         onChange={(e)=>{
-          setname(e.target.value)
-
-         }}
+    
        />
 
 <TextField
@@ -113,25 +72,25 @@ className="lg:w-fit w-full   lg:py-13  lg:px-6    flex items-center justify-even
          label="Email"
          multiline
          maxRows={3}
-         value={Email}
+        //  value={Email}
          required
-         onChange={(e)=>{
-          setEmail(e.target.value)
+        //  onChange={(e)=>{
+        //   setEmail(e.target.value)
 
-         }}
+        //  }}
        />
        <TextField
          id="filled-multiline-flexible"
          label="Password"
          multiline
          maxRows={3}
-         value={password}
+        //  value={password}
          required
          placeholder="City,country"
-         onChange={(e)=>{
-          setpassword(e.target.value)
+        //  onChange={(e)=>{
+        //   setpassword(e.target.value)
 
-         }}
+        //  }}
        />
 
 <TextField
@@ -139,35 +98,25 @@ className="lg:w-fit w-full   lg:py-13  lg:px-6    flex items-center justify-even
          label="Arivving"
          multiline
          maxRows={3}
-         value={Arrvining}
          required
-         onChange={(e)=>{
-          setArrvining(e.target.value)
-
-         }}
+     
        
        />
-
-         <div className="h-full lg:w-fit w-full px-5 flex items-center justify-center ">
-  <button className='lg:py-2  lg:px-2 py-3  px-14  bg-black text-white rounded-full'>
-<IoPaperPlane className='lg:text-1xl text-2xl' />
-</button>
-  </div>  
-   </div>
-
-    </form>
-  
+ <div className='p-2 rounded-full  bg-black text-white'>
+       <IoIosSend className='text-2xl' />
+       </div>
+        </form>
+    </div>
   </div>
-
-
-</motion.div>
   )
-}
-
-
-      </div>
+ }
  
 
+
+
+         
+      </div>
+      
     </div>
   )
 }
