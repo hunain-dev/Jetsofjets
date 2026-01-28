@@ -17,7 +17,7 @@ scroll-behavior: smooth;
 }
 @font-face {
   font-family: Gt;
-  src: url(../src/assets/Gt.otf);
+  src: url(/public/assets/Gt.otf);
 }
 
 .Gt{
@@ -26,7 +26,7 @@ scroll-behavior: smooth;
 
 @font-face {
   font-family: Gt2;
-  src: url(../src/assets/Gt2.otf);
+  src: url(/public/assets/Gt2.otf);
 }
 
 .Gt2{
@@ -35,7 +35,7 @@ scroll-behavior: smooth;
 
 @font-face {
   font-family: Gt3;
-  src: url(../src/assets/Gt3.otf);
+  src: url(/public/assets/Gt3.otf);
 }
 
 .Gt3{

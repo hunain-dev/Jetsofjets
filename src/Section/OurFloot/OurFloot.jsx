@@ -1,5 +1,4 @@
 import React, {  useLayoutEffect, useRef } from 'react'
-import plane from "../../assets/Images/Plane.Webp"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
@@ -99,7 +98,7 @@ exceptional range and top-end speed.</h4>
     >
     <img
      loading="lazy"
-      src={plane}
+      src="/public/assets/Images/Plane.Webp"
       className="w-full h-full lg:object-contain object-cover"
       alt="plane"
     />

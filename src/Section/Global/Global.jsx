@@ -1,6 +1,5 @@
 // import React, { useEffect, useRef } from 'react'
 import { motion } from "framer-motion";
-import Eearth from "../../assets/images/Earth.png"
 
 const Global = () => {
 
@@ -14,7 +13,7 @@ const Global = () => {
          <div className="h-full w-full  absolute  top-0 left-0 ">
          <motion.img
           loading="lazy"
-    src={Eearth}
+    src="/public/assets/images/Earth.png"
     alt="Earth"
     className='h-full w-full object-contain'
     animate={{ rotate: 360 }}
