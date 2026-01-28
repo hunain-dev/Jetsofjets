@@ -15,7 +15,7 @@ const Ourfligths = () => {
   };
 
   return (
-    <div className='h-screen w-full   xl:py-6  xl:px-13 lg:px-14  lg:py-6 md:py-5   py-2 flex items-end justify-end fixed z-999'>
+    <div className='pointer-events-none h-screen w-full   xl:py-6  xl:px-13 lg:px-14  lg:py-6 md:py-5   py-2 flex items-end justify-end fixed z-999'>
       <div className='lg:min-h-[30vh] lg:py-4  min-h-[60vh] md:min-h-[20vh] flex items-end justify-end  w-full  relative '>
   
   {/* Our fight button */}
