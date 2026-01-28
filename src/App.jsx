@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import Home from './Section/Home/Home';
 import Aboutus from './Section/Aboutus/Aboutus';
 import OurFloot from './Section/OurFloot/OurFloot';
-import FlatAeroplane from "../src/assets/Images/FlatAeroplane.png"
+import FlatAeroplane from "./assets/Images/FlatAeroplane.png"
 import Advantages from './Section/Advantages/Advantages';
 import Global from './Section/Global/Global';
 import { motion } from "framer-motion";
