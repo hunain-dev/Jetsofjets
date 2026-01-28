@@ -83,7 +83,6 @@ const App = () => {
     };
   }, []);
 
-
   // our manufacture
 
   const planeranks = [
@@ -126,7 +125,7 @@ const App = () => {
 
   return (
     <div ref={scrollRef}>
-      <div className='h-full w-full '>
+      <div className='h-full w-full z-99999 '>
         <Home/>
         <Aboutus/>
         <div className=' bg-gradient-to-b from-[#D6CEC5] to-[#FCF6EB]  w-full'>

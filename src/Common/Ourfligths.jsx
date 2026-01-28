@@ -9,13 +9,12 @@ const Ourfligths = () => {
     setOpenpopup(true); 
   };
 
-
     const Close = () => {
     setOpenpopup(false);
   };
 
   return (
-    <div className='pointer-events-none h-screen w-full   xl:py-6  xl:px-13 lg:px-14  lg:py-6 md:py-5   py-2 flex items-end justify-end fixed z-999'>
+    <div className='w-full xl:py-5  xl:px-13 lg:px-14  lg:py-6 md:py-5   py-2 flex items-end justify-end fixed  z-9 inset-0  bottom-0 left-0  '>
       <div className='lg:min-h-[30vh] lg:py-4  min-h-[60vh] md:min-h-[20vh] flex items-end justify-end  w-full  relative '>
   
   {/* Our fight button */}
@@ -32,7 +31,7 @@ const Ourfligths = () => {
     transition-all duration-300 ease-out
     active:scale-[0.97]'>
       <div className='cursor-pointer   flex items-center  w-full xl:p-1  xl:px-4 md:px-5 md:py-2 px-4 py-1 lg:px-6 rounded-full  justify-center bg-white   text-black'>
-      <h2 className='Gt2 xl:text-[1.1vw] lg:text-[1.7vw] md:text-2xl text-[3vw] mt-1 tracking-tighter '>Book the flight</h2>
+      <h2 className='Gt2 xl:text-[1.1vw] lg:text-[1.7vw] md:text-2xl text-[4vw] mt-1 tracking-tighter '>Book the flight</h2>
       </div>
  
        <div className='p-2 rounded-full  bg-white text-black'>

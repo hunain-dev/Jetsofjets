@@ -94,7 +94,7 @@ const Aboutus = () => {
         
     ]
   return (
-<div id="Aboutus"   className="lg:h-[200vh]   lg:py-0 py-6 w-full bg-[#2875B7] relative">
+<div id="Aboutus"   className="lg:h-[200vh]  2xl:bg-red-500   lg:py-0 py-6 w-full bg-[#2875B7] relative">
 <div className='back h-full w-full'>
         <img   loading="lazy"src={Aboutclouds} className='h-full w-full object-cover' alt="" />
         </div>
