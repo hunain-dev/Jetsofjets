@@ -4,6 +4,10 @@ import TextField from "@mui/material/TextField";
 
 const Ourfligths = () => {
   const [Openpopup, setOpenpopup] = useState(false)
+  const [name, setname] = useState("")
+  const [Email, setEmail] = useState("")
+  const [Password, setPassword] = useState("")
+  const [Arriving, setArriving] = useState("")
 
   const buttonHandler = () => {
     setOpenpopup(true); 
@@ -12,6 +16,18 @@ const Ourfligths = () => {
     const Close = () => {
     setOpenpopup(false);
   };
+
+
+  const fromhanlder  = (e) =>{
+    e.preventDefault();
+    setname("")
+    setEmail("")
+    setPassword("")
+    setArriving("")
+    alert("did you have submit is ???")
+    // console.log(`your name is ${name} your Email is ${Email} and your password is ${Password} and arrving is ${Arriving}`)
+
+  }
 
   return (
     <div className='h-full w-full   xl:px-13 lg:px-14  lg:py-1 md:py-5   py-2 flex items-end justify-end fixed  z-50 inset-0  bottom-0 left-0  pointer-events-none  '>
@@ -46,7 +62,6 @@ const Ourfligths = () => {
  {
   Openpopup && (
     <div className='pointer-events-auto h-full w-full lg:py-0 py-3 opacity-100 lg:rounded-3xl flex items-center justify-start overflow-hidden lg:flex-row flex-col absolute top-0 left-0 lg:bg-white bg-white'>
-   
         <div onClick={Close}  className='py-3 px-3 w-fit  absolute top-0 right-0'>
         <IoIosClose className='cursor-pointer text-4xl' />
 
@@ -54,8 +69,8 @@ const Ourfligths = () => {
     <div className='h-full flex items-center justify-center px-5  '>
       <h2 className='Gt3 text-3xl md:text-5xl  xl:text-4xl'>Contact</h2>
     </div>
-    <div className=' h-full w-full   px-3'>
-        <form action="" className='h-full flex items-center justify-start lg:flex-row flex-col md:flex-row lg:gap-12 gap-5 w-full '> 
+    <div className=' h-full w-full   px-3 pointer-events-auto '>
+        <form onSubmit={fromhanlder}  className='h-full flex items-center justify-start lg:flex-row flex-col md:flex-row lg:gap-12 gap-5 w-full '> 
         <TextField
          id="filled-multiline-flexible"
          label="Name"
@@ -63,6 +78,12 @@ const Ourfligths = () => {
          className="Gt3"
          maxRows={3}
          required
+         value={name}
+         onChange={(e)=>{
+          setname(e.target.value)
+
+         }}
+
     
        />
 
@@ -71,25 +92,25 @@ const Ourfligths = () => {
          label="Email"
          multiline
          maxRows={3}
-        //  value={Email}
+         value={Email}
          required
-        //  onChange={(e)=>{
-        //   setEmail(e.target.value)
+         onChange={(e)=>{
+          setEmail(e.target.value)
 
-        //  }}
+         }}
        />
        <TextField
          id="filled-multiline-flexible"
          label="Password"
          multiline
          maxRows={3}
-        //  value={password}
+         value={Password}
          required
          placeholder="City,country"
-        //  onChange={(e)=>{
-        //   setpassword(e.target.value)
+         onChange={(e)=>{
+          setPassword(e.target.value)
 
-        //  }}
+         }}
        />
 
 <TextField
@@ -98,12 +119,19 @@ const Ourfligths = () => {
          multiline
          maxRows={3}
          required
-     
+         value={Arriving}
+         onChange={(e)=>{
+          setArriving(e.target.value)
+
+         }}
        
        />
- <div className='p-2 rounded-full  bg-black text-white'>
-       <IoIosSend className='text-2xl md:text-3xl xl:text-2xl ' />
-       </div>
+<button
+  type="submit"
+  className='pointer-events-auto cursor-pointer p-2 rounded-full bg-black text-white'
+>
+  <IoIosSend className='text-2xl md:text-3xl xl:text-2xl ' />
+</button>
         </form>
     </div>
   </div>
