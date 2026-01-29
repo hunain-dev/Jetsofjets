@@ -99,7 +99,7 @@ const Aboutus = () => {
         </div>
         <div className='front lg:pt-20 pt-10 lg:px-20 px-5    h-full w-full  absolute top-0 left-0'>
             <div className='w-full '>
-                <h2  ref={(el) => (textRef.current[0] = el)} className='text-white  Gt3 tracking-tighter xl:leading-14 leading-9  xl:text-[3.4vw] lg:text-4xl md:text-6xl text-2xl'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
+                <h2  ref={(el) => (textRef.current[0] = el)} className='text-white  Gt3 tracking-tighter xl:leading-14 leading-9  xl:text-[3.4vw] lg:text-4xl md:text-6xl text-2xl 2xl:text-7xl 2xl:leading-16'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
                 </h2>
             </div>
 
@@ -125,8 +125,8 @@ const Aboutus = () => {
     return (
       <div key={index} className=" h-full w-full ">
         <div className="flex flex-col lg:gap-6 md:gap-10 gap-5">
-          <h2 className="Gt3 lg:leading-5 lg:text-[1.5vw] md:text-[3.3vw] text-[3vw] ">{elem.tittle}</h2>
-          <h4 className="lg:leading-4 Gt2 lg:text-[0.9vw]  md:text-[2.3vw] text-[2vw]">
+          <h2 className="Gt3 lg:leading-5 lg:text-[1.5vw] md:text-[3.3vw] text-[3vw] 2xl:leading-7   2xl:text-2xl ">{elem.tittle}</h2>
+          <h4 className="lg:leading-4 Gt2 lg:text-[0.9vw]  md:text-[2.3vw] text-[2vw] 2xl:text-[1.2vw] 2xl:leading-6">
             {elem.desc}
           </h4>
         </div>

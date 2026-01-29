@@ -64,11 +64,8 @@ const Home = () => {
         return () => ctx.revert();
       }, []);
       
-    
-    
-
   return (
-    <div  id="home"     ref={containerRef}
+    <div  id="home" ref={containerRef}
     className='h-screen w-full relative overflow-hidden '>
         <div className='h-full w-full  relative'>
             <img  loading="lazy"    src="/assets/Images/Clouds.webp" 
