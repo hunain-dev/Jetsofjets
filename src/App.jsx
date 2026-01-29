@@ -129,16 +129,14 @@ const App = () => {
         <Aboutus/>
         <div className=' bg-gradient-to-b from-[#D6CEC5] to-[#FCF6EB]  w-full'>
         <OurFloot/>
-
         {/* gulstream */}
-
-
 <motion.div  variants={container}
 initial="hidden"
 whileInView="show"
 viewport={{ once: true, amount: 0.25 }} className='h-full    l md:py-9 md:h-full md:px-6 lg:p-7 lg:px-5 xl:px-10 px-4  w-full  grid lg:grid-cols-3'>
-            <motion.div     variants={leftVariant}
-  className='h-full py-10  flex items-center justify-between flex-col w-full '>
+            <motion.div   
+              variants={leftVariant}
+             className='h-full py-10  flex items-center justify-between flex-col w-full '>
              <div   className='Gt3  text-[#312726] w-full '>
               <h2 className='tracking-tighter lg:text-1xl md:text-3xl'> Gulfstream</h2>
               <h4  className='tracking-tighter mt-4 text-6xl md:text-8xl'>650ER</h4>

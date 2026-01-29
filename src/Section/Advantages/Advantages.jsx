@@ -12,6 +12,7 @@ const Advantages = () => {
     const [time, setTime] = useState("");
 
 
+ 
     const container = {
       hidden: { opacity: 1 },
       show: {
@@ -21,7 +22,6 @@ const Advantages = () => {
       },
       },
     };
-    
     
     const leftVariant = {
       hidden: { x: -160, opacity: 0 },
@@ -34,7 +34,6 @@ const Advantages = () => {
         },
       },
     };
-    
     
     const rightVariant = {
       hidden: { x: 160, opacity: 0 },
@@ -82,9 +81,7 @@ const Advantages = () => {
         setActiveIndex(activeIndex === index ? null : index);
       };
 
-
     //   localtime of dubai
-
       useEffect(() => {
         const updateTime = () => {
           const dubaiTime = new Date().toLocaleTimeString("en-US", {
@@ -100,6 +97,7 @@ const Advantages = () => {
     
         return () => clearInterval(interval);
       }, []);
+
     const faqs = [
         {
           question: "Pets",
@@ -129,14 +127,16 @@ const Advantages = () => {
       ];
   
   return (
-    <div id="Advantages"    variants={container}
+    <div id="Advantages"  
+    variants={container}
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.25 }}
     className=' md:px-0   px-3 lg:py-20 md:py-10  w-full'>
-
         <div className='h-full w-full lg:mt-0 mt-20 grid lg:grid-cols-2'>
         <div className='h-full  '>
+
+
         <motion.div variants={leftVariant}  className='h-full  lg:px-12 '>
            <div className="lg:py-12  py-9  px-4">
       <div className="lg:space-y-1 space-y-10 md:space-y-12">
@@ -162,6 +162,8 @@ const Advantages = () => {
       </div>
     </div>
         </motion.div>
+
+        
         </div>
         <motion.div variants={rightVariant} className='h-fit md:px-3 w-full flex items-center justify-center overflow-hidden '>
             <img  
@@ -176,7 +178,7 @@ const Advantages = () => {
         </div>
       
 
-      <div className='py-3 mt-7 w-full lg:px-12 py-4 border-t-1 border-gray-500  grid lg:grid-cols-2'>
+      <motion.div variants={rightVariant} className=' mt-7 w-full lg:px-12 py-4 border-t-1 border-gray-500  grid lg:grid-cols-2'>
         <div className='h-full  '>
             <h2 className='Gt3 opacity-40 lg:text-[0.8vw] text-1xl'>
             Countries supported</h2>
@@ -197,7 +199,7 @@ const Advantages = () => {
 </div>
       
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

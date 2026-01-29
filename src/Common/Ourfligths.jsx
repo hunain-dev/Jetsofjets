@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { IoIosClose, IoIosSend } from "react-icons/io";
 import TextField from "@mui/material/TextField";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Ourfligths = () => {
   const [Openpopup, setOpenpopup] = useState(false)
@@ -29,6 +30,36 @@ const Ourfligths = () => {
 
   }
 
+
+
+  const popupVariants = {
+    hidden: {
+      opacity: 0,
+      y: 90,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 80,
+      scale: 0.95,
+      transition: {
+        duration: 0.35,
+        ease: "easeIn",
+      },
+    },
+  };
+
+  
   return (
     <div className='h-full w-full   xl:px-13 lg:px-14  lg:py-1 md:py-5   py-2 flex items-end justify-end fixed  z-50 inset-0  bottom-0 left-0  pointer-events-none  '>
       <div className='lg:min-h-[30vh] lg:py-4  min-h-[60vh] md:min-h-[20vh] flex items-end justify-end  w-full  relative '>
@@ -59,26 +90,40 @@ const Ourfligths = () => {
   {/* our flight form */}
 
 
- {
+
+<AnimatePresence>
+{
   Openpopup && (
-    <div className='pointer-events-auto h-full w-full lg:py-0 py-3 opacity-100 lg:rounded-3xl flex items-center justify-start overflow-hidden lg:flex-row flex-col absolute top-0 left-0 lg:bg-white bg-white'>
-        <div onClick={Close}  className='py-3 px-3 w-fit  absolute top-0 right-0'>
+
+    <motion.div    variants={popupVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit" className='pointer-events-auto h-full w-full lg:py-0 py-3 opacity-100 lg:rounded-3xl flex items-center justify-start overflow-hidden lg:flex-row flex-col absolute top-0 left-0 lg:bg-white bg-white'>
+        <motion.div 
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.2 }}
+          onClick={Close}  className='py-3 px-3 w-fit  absolute top-0 right-0'>
         <IoIosClose className='cursor-pointer text-4xl' />
 
-        </div>
-    <div className='h-full flex items-center justify-center px-5  '>
+        </motion.div>
+    <motion.div   initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.15 }}  className='h-full flex items-center justify-center px-5  '>
       <h2 className='Gt3 text-3xl md:text-5xl  xl:text-4xl'>Contact</h2>
-    </div>
-    <div className=' h-full w-full   px-3 pointer-events-auto '>
-        <form onSubmit={fromhanlder}  className='h-full flex items-center justify-start lg:flex-row flex-col md:flex-row lg:gap-12 gap-5 w-full '> 
+    </motion.div>
+    <motion.div   initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }} className=' h-full w-full   px-3 pointer-events-auto '>
+        <form onSubmit={fromhanlder}  className='h-full flex items-center justify-start lg:flex-row flex-col md:flex-row lg:gap-7 gap-5 w-full '> 
         <TextField
          id="filled-multiline-flexible"
          label="Name"
-         multiline
-         className="Gt3"
+         type='name'
          maxRows={3}
-         required
          value={name}
+         required
+         placeholder='Email'
          onChange={(e)=>{
           setname(e.target.value)
 
@@ -90,10 +135,11 @@ const Ourfligths = () => {
 <TextField
          id="filled-multiline-flexible"
          label="Email"
-         multiline
+         type='email'
          maxRows={3}
          value={Email}
          required
+         placeholder='Email'
          onChange={(e)=>{
           setEmail(e.target.value)
 
@@ -102,11 +148,11 @@ const Ourfligths = () => {
        <TextField
          id="filled-multiline-flexible"
          label="Password"
-         multiline
+         type="password"
          maxRows={3}
          value={Password}
          required
-         placeholder="City,country"
+         placeholder="password"
          onChange={(e)=>{
           setPassword(e.target.value)
 
@@ -119,6 +165,7 @@ const Ourfligths = () => {
          multiline
          maxRows={3}
          required
+         placeholder="Arivving"
          value={Arriving}
          onChange={(e)=>{
           setArriving(e.target.value)
@@ -133,11 +180,13 @@ const Ourfligths = () => {
   <IoIosSend className='text-2xl md:text-3xl xl:text-2xl ' />
 </button>
         </form>
-    </div>
-  </div>
+    </motion.div>
+  </motion.div>
   )
  }
  
+
+</AnimatePresence>
 
 
 

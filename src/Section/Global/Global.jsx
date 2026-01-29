@@ -3,15 +3,60 @@ import { motion } from "framer-motion";
 
 const Global = () => {
 
+
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.25,
+        delayChildren: 0.2,
+      },
+    },
+  };
+  
+  const leftText = {
+    hidden: { opacity: 0, x: -120 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.9, ease: "easeOut" },
+    },
+  };
+  
+  const rightText = {
+    hidden: { opacity: 0, x: 120 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.9, ease: "easeOut" },
+    },
+  };
+  
+  const earthVariant = {
+    hidden: { opacity: 0, scale: 0.6 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1.2, ease: "easeOut", delay: 0.4 },
+    },
+  };
+  
   
   return (
-    <div id="Global" className=" h-screen w-full overflow-hidden  bg-gradient-to-b relative from-[#2D2423] to-[#020101]">
-      <div className="h-full w-full relative ">
-         <div className=" w-full ">
+    <motion.div
+    variants={container}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.4 }}
+    id="Global" className=" h-screen w-full overflow-hidden  bg-gradient-to-b relative from-[#2D2423] to-[#020101]">
+      <motion.div   variants={leftText} className="h-full w-full relative ">
+         <div 
+ className=" w-full ">
           <h2 className="Gt3 text-[25vw] leading-90 tracking-tighter text-[#2E2524]">Global</h2>
          </div>
          <div className="h-full w-full  absolute  top-0 left-0 ">
          <motion.img
+           variants={earthVariant}
           loading="lazy"
     src="/public/assets/images/Earth.png"
     alt="Earth"
@@ -23,8 +68,8 @@ const Global = () => {
       ease: "linear",
     }}
   />         </div>
-      </div>
-      <div className=" h-full w-full text-white py-7 px-20  flex items-end justify-end  absolute top-0 left-0 ">
+      </motion.div>
+  <motion.div  variants={leftText} className=" h-full w-full text-white py-7 px-20  flex items-end justify-end  absolute top-0 left-0 ">
         <div className="h-full pt-30  w-full   grid lg:grid-cols-2 md:grid-cols-1 ">
           <div className="h-full  grid grid-cols-1">
             <div className=" w-full ">
@@ -44,7 +89,7 @@ control
               
               </div> 
             </div>
-            <div className="h-full  grid grid-cols-1">
+            <motion.div  variants={rightText} className="h-full  grid grid-cols-1">
             <div className=" w-full flex lg:items-end  md:justify-start md:items-center md:gap-2  lg:justify-start flex-col ">
               <h3 className="Gt3 text-1xl md:text-3xl xl:text-3xl lg:text-[2.5vw] tracking-tighter leading-7">Info@jeskojets.com</h3>
               <h3 className="Gt3 text-1xl l md:text-3xl  xl:text-3xl lg:text-[2.5vw] tracking-tighter ">+91 54 432 5050</h3>
@@ -55,10 +100,10 @@ control
               <h4 className="lg:text-sm md:text-4xl ">The first the Last</h4>
               
               </div> 
+            </motion.div>
             </div>
-            </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
     
   )
 }
