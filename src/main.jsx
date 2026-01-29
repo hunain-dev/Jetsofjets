@@ -9,7 +9,7 @@ import Menu from './Common/Menu.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <Loader/> head */}
+    <Loader/>
     <Menu/>
     <Header/>
     <Ourfligths/>

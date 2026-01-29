@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
+import clouds from "../../../public/assets/images/Clouds.webp";
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
     const containerRef = useRef(null);
@@ -71,7 +72,8 @@ const Home = () => {
     <div  id="home"     ref={containerRef}
     className='h-screen w-full relative overflow-hidden '>
         <div className='h-full w-full  relative'>
-            <img  loading="lazy"  src="/public/assets/images/Clouds.webp" alt="clouds image" className='h-full w-full object-cover' />
+            <img  loading="lazy"    src={clouds} 
+ alt="clouds image" className='h-full w-full object-cover' />
 
 
             <div className=" h-full  w-full overflow-hidden absolute top-0 left-0 items-center justify-center">
