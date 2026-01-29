@@ -105,7 +105,7 @@ const Home = () => {
     </div>        </div>
         <div className='h-full w-full lg:p-0 p-6  absolute top-0 left-0 '>
             <img    ref={imageRef} 
- src="/public/assets/Images/Jets.webp"  loading="lazy" className='h-full w-full object-cover object-center' alt="" />
+ src="/assets/Images/Jets.webp"  loading="lazy" className='h-full w-full object-cover object-center' alt="" />
 
 <div
   ref={textRef}
