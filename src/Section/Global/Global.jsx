@@ -58,7 +58,7 @@ const Global = () => {
          <motion.img
            variants={earthVariant}
           loading="lazy"
-    src="/public/assets/images/Earth.png"
+    src="/assets/Images/Earth.png"
     alt="Earth"
     className='h-full w-full object-contain'
     animate={{ rotate: 360 }}

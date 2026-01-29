@@ -174,7 +174,7 @@ viewport={{ once: true, amount: 0.25 }} className='h-full    l md:py-9 md:h-full
             </motion.div>
             <motion.div     variants={centerVariant}
  className='h-full w-full '>
-              <img src="/public/assets/images/FlatAeroplane.png" className='h-full  lg:p-5 md:p-20 p-10 w-full object-cover' alt="" />
+              <img src="/assets/Images/FlatAeroplane.png" className='h-full  lg:p-5 md:p-20 p-10 w-full object-cover' alt="" />
             </motion.div>
             <motion.div         variants={rightVariant}
 

@@ -71,7 +71,7 @@ const Home = () => {
     <div  id="home"     ref={containerRef}
     className='h-screen w-full relative overflow-hidden '>
         <div className='h-full w-full  relative'>
-            <img  loading="lazy"    src="/public/assets/images/Clouds.webp" 
+            <img  loading="lazy"    src="/assets/Images/Clouds.webp" 
  alt="clouds image" className='h-full w-full object-cover' />
 
 
@@ -81,20 +81,20 @@ const Home = () => {
     
     {/* first set */}
     <div className=" w-full grid grid-cols-4">
-              <img src="/public/assets/images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
-              <img src="/public/assets/images/real.png"  loading="lazy"className="h-full w-full object-contain" alt="" />
-              <img src="/public/assets/images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
-              <img src="/public/assets/images/real.png"   loading="lazy"className="h-full w-full object-contain" alt="" />
+              <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
+              <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
 
                 </div>
       
 
     {/* second set (duplicate for infinite loop) */}
     <div className=" w-full grid grid-cols-4">
-    <img src="/public/assets/images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
-    <img src="/public/assets/images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
-    <img src="/public/assets/images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
-    <img src="/public/assets/images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
+    <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
+    <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
+    <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
+    <img src="/assets/Images/real.png"  loading="lazy" className="h-full w-full object-contain" alt="" />
 
                 </div>
       

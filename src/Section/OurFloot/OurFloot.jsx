@@ -98,7 +98,7 @@ exceptional range and top-end speed.</h4>
     >
     <img
      loading="lazy"
-      src="/public/assets/Images/Plane.Webp"
+      src="/assets/Images/Plane.webp"
       className="w-full h-full lg:object-contain object-cover"
       alt="plane"
     />

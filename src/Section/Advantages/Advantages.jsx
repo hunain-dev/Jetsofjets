@@ -11,8 +11,6 @@ const Advantages = () => {
     const isFirstRender = useRef(true);
     const [time, setTime] = useState("");
 
-
- 
     const container = {
       hidden: { opacity: 1 },
       show: {
@@ -102,25 +100,25 @@ const Advantages = () => {
         {
           question: "Pets",
           answer: "Traveling with pets on a private jet means comfort and peace of mind for both owners and their companions. Our dedicated team ensures seamless arrangements, from documentation and safety to onboard care, so that your pet enjoys the same level of attention and luxury as you do. Every detail is managed to create a stress-free and enjoyable journey for everyone on board.",
-          image: "/public/assets/Images/Aeroplanegate.Webp",
+          image: "/assets/Images/Aeroplanegate.webp",
 
         },
         {
             question: "24/7 availability",
             answer: "Our team is available around the clock to handle any request, no matter the time zone or urgency. From last-minute flight arrangements to personalized services, we provide seamless support whenever you need it. With us, assistance is never more than a call away.",
-            image: "/public/assets/Images/Mandrinking.Webp",
+            image: "/assets/Images/Mandrinking.webp",
 
           },
           {
             question: "Onboard services",
             answer: "Every flight is tailored with a range of personalized onboard services designed to elevate your journey. From fine dining and curated entertainment to attentive crew and seamless connectivity, every detail is arranged to ensure maximum comfort and enjoyment in the air.",
-            image: "/public/assets/Images/PetsSeeing.Webp",
+            image: "/assets/Images/PetsSeeing.webp",
 
           },
           {
             question: "Efficient",
             answer: "operate. From optimized routes and streamlined procedures to quick boarding and smooth ground handling, we make sure your time is always used wisely. The result is a seamless journey that gets you where you need to be, faster and without compromise.",
-            image: "/public/assets/Images/Airport.Webp",
+            image: "/assets/Images/Airport.webp",
 
           },
     
