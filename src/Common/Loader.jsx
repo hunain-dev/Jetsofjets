@@ -50,7 +50,7 @@ const Loader = () => {
         ref={textRef}
         className="text-white flex flex-col items-center gap-3"
       >
-        <h1 className="text-center Gt3 lg:text-[2.5vw] md:text-4xl text-2xl lg:leading-9 md:leading-12 leading-7  tracking-tighter">
+        <h1 className="text-center Gt3 lg:text-[2.5vw] md:text-4xl text-2xl lg:leading-9 md:leading-12 leading-7  tracking-tighter 2xl:text-3xl">
           Private Jets character <br /> World wide
         </h1>
       </div>

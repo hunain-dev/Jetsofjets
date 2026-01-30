@@ -97,9 +97,9 @@ const Aboutus = () => {
 <div className='back h-full w-full'>
         <img   loading="lazy"src="/assets/Images/Aboutclouds.png" className='h-full w-full object-cover' alt="" />
         </div>
-        <div className='front lg:pt-20 pt-10 lg:px-20 px-5    h-full w-full  absolute top-0 left-0'>
+        <div className='front  lg:pt-20 pt-10 lg:px-20 2xl:px-23 px-5    h-full w-full  absolute top-0 left-0'>
             <div className='w-full '>
-                <h2  ref={(el) => (textRef.current[0] = el)} className='text-white  Gt3 tracking-tighter xl:leading-14 leading-9  xl:text-[3.4vw] lg:text-4xl md:text-6xl text-2xl 2xl:text-7xl 2xl:leading-16'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
+                <h2  ref={(el) => (textRef.current[0] = el)} className='text-white  Gt3 tracking-tighter xl:leading-14 leading-9  xl:text-[3.4vw] lg:text-4xl md:text-6xl text-2xl 2xl:text-[3.6vw] 2xl:leading-16'>Jesko Jets® is a private aviation operator with over 5,000 missions completed across 150+ countries. From international executives to global industries, our clients trust us to deliver on time, every time.
                 </h2>
             </div>
 
