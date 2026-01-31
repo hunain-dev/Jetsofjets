@@ -61,7 +61,7 @@ const Ourfligths = () => {
 
   
   return (
-    <div className='h-full w-full   xl:px-13 lg:px-14  lg:py-1 md:py-5   py-2 flex items-end justify-end fixed  z-50 inset-0  bottom-0 left-0  pointer-events-none  '>
+    <div className='h-full w-full xl:px-21 lg:px-14  lg:py-1 md:py-5   py-2 flex items-end justify-end fixed  z-50 inset-0  bottom-0 left-0  pointer-events-none  '>
       <div className='lg:min-h-[30vh] lg:py-4  min-h-[60vh] md:min-h-[20vh] flex items-end justify-end  w-full  relative '>
   
   {/* Our fight button */}
@@ -98,7 +98,7 @@ const Ourfligths = () => {
     <motion.div    variants={popupVariants}
     initial="hidden"
     animate="visible"
-    exit="exit" className='pointer-events-auto h-full w-full lg:py-0 py-3 opacity-100 lg:rounded-3xl flex items-center justify-start overflow-hidden lg:flex-row flex-col absolute top-0 left-0 lg:bg-white bg-white'>
+    exit="exit" className='pointer-events-auto h-full w-full lg:py-0 py-3 opacity-100 lg:rounded-3xl flex items-center justify-start overflow-hidden lg:flex-row flex-col absolute top-0 left-0  bg-white  lg:px-2'>
         <motion.div 
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -110,12 +110,12 @@ const Ourfligths = () => {
     <motion.div   initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15 }}  className='h-full flex items-center justify-center px-5  '>
-      <h2 className='Gt3 text-3xl md:text-5xl  xl:text-4xl'>Contact</h2>
+      <h2 className='Gt3 text-3xl md:text-5xl  xl:text-4xl lg:text-3xl 2xl:text-6xl' >Contact</h2>
     </motion.div>
     <motion.div   initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.25 }} className=' h-full w-full   px-3 pointer-events-auto '>
-        <form onSubmit={fromhanlder}  className='h-full flex items-center justify-start lg:flex-row flex-col md:flex-row lg:gap-7 gap-5 w-full '> 
+        <form onSubmit={fromhanlder}  className='h-full flex items-center justify-start lg:flex-row flex-col md:flex-row lg:gap-5 lg:md:flex-row  gap-5 w-full '> 
         <TextField
          id="filled-multiline-flexible"
          label="Name"
@@ -177,7 +177,7 @@ const Ourfligths = () => {
   type="submit"
   className='pointer-events-auto cursor-pointer p-2 rounded-full bg-black text-white'
 >
-  <IoIosSend className='text-2xl md:text-3xl xl:text-2xl ' />
+  <IoIosSend className='text-2xl md:text-3xl xl:text-[2vw] lg:text-[2vw] ' />
 </button>
         </form>
     </motion.div>
